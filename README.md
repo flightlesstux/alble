@@ -1,5 +1,5 @@
 ## Which problem I solved?
-**-** This codes are requesting a Let's Encrypt SSL Certificate from ACME and issuing and deploying the issued SSL certificate to the AWS Application Lod Balancer. You can check out the story and installation steps on**https://ercanermis.com/automate-lets-encrypt-ssl-on-aws-application-load-balancer**
+**-** This codes are requesting a Let's Encrypt SSL Certificate from ACME and issuing and deploying the issued SSL certificate to the AWS Application Lod Balancer. You can check out the story and installation steps on **https://ercanermis.com/automate-lets-encrypt-ssl-on-aws-application-load-balancer**
 
 ## Prerequisites
 **-** aws-cli
