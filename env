@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ALBLE_PATH="/opt/alble"
+AWS_REGION="REGION"
+AWS_PROFILE="acme-challange" #If you are using IAM Role, you can skip it. Otherwise you should comment out --profile args.
+ALB_ARN="arn:aws:elasticloadbalancing:REGION:ACCOUNT_ID:loadbalancer/app/ALB_NAME/4a1df3859a2576ca"
+ALB_DNS_NAME="ALB_NAME-1302305711.REGION.elb.amazonaws.com"
+ALB_LISTENER_ARN="arn:aws:elasticloadbalancing:REGION:ACCOUNT_ID:listener/app/ALB_NAME/4a1df3859a2576ca/a8a98dba63663fe9"
+SLACK_WEBHOOK_URL="https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XxXxXxXxXxXxXxXxXxXxXxX"
+SLACK_CHANNEL="#alble-alerts"
+EMAIL="alerts@domain.com"

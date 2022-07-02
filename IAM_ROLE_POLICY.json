@@ -1,0 +1,86 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AWSLEPolicy1",
+            "Effect": "Allow",
+            "Action": [
+                "acm:DescribeCertificate",
+                "acm:RemoveTagsFromCertificate",
+                "acm:GetCertificate",
+                "acm:AddTagsToCertificate",
+                "acm:ListCertificates",
+                "acm:ImportCertificate",
+                "acm:ListTagsForCertificate"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "acme-challenge-server-Elastic-IP/32"
+                }
+            }
+        },
+        {
+            "Sid": "AWSLEPolicy2",
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:RemoveTags",
+                "elasticloadbalancing:DescribeTags",
+                "elasticloadbalancing:AddTags",
+                "elasticloadbalancing:AddListenerCertificates"
+            ],
+            "Resource": "AWS::ALB::ARN",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "acme-challenge-server-Elastic-IP/32"
+                }
+            }
+        },
+        {
+            "Sid": "AWSLEPolicy3",
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:DescribeSSLPolicies",
+                "elasticloadbalancing:DescribeListeners",
+                "elasticloadbalancing:DescribeListenerCertificates"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "acme-challenge-server-Elastic-IP/32"
+                }
+            }
+        },
+        {
+            "Sid": "AWSLEPolicy4",
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:RemoveTags",
+                "elasticloadbalancing:DescribeTags",
+                "elasticloadbalancing:AddTags"
+            ],
+            "Resource": "AWS::ALB::ARN",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "acme-challenge-server-Elastic-IP/32"
+                }
+            }
+        },
+        {
+            "Sid": "AWSLEPolicy5",
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:DescribeSSLPolicies",
+                "elasticloadbalancing:DescribeListeners",
+                "elasticloadbalancing:AddListenerCertificates",
+                "elasticloadbalancing:DescribeListenerCertificates"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "acme-challenge-server-Elastic-IP/32"
+                }
+            }
+        }
+    ]
+}
